@@ -1,0 +1,19 @@
+{
+  "name": "alfred-infinite-clipboard",
+  "version": "1.0.0",
+  "description": "",
+  "bin": {
+    "alfred-infinite-clipboard": "./cli.js"
+  },
+  "keywords": [],
+  "author": "Szymon Kaliski <hi@szymonkaliski.com> (http://szymonkaliski.com)",
+  "license": "MIT",
+  "dependencies": {
+    "better-sqlite3": "^7.1.1",
+    "chalk": "^4.1.0",
+    "dateformat": "^3.0.3",
+    "env-paths": "^2.2.0",
+    "lodash": "^4.17.20",
+    "yargs": "^16.1.0"
+  }
+}
