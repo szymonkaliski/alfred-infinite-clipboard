@@ -60,15 +60,20 @@ const search = (term = "", limit = 0) => {
     ${limit > 0 ? `LIMIT ${limit}` : ""}
   `;
 
-  const results = chain([alfredDB, infiniteClipboardDB])
+  let results = chain([alfredDB, infiniteClipboardDB])
     .flatMap((db) => db.prepare(searchSQL).all({ term: `%${term}%` }))
     .map((d) => ({
       ...d,
       item: d.item.trim(),
       ts: d.ts * 1000 + REF_DATE,
     }))
-    .uniqBy((d) => [d.item, d.app, d.ts].join("-"))
-    .value();
+    .uniqBy((d) => [d.item, d.app, d.ts].join("-"));
+
+  if (limit > 0) {
+    results = results.slice(0, limit);
+  }
+
+  results = results.value();
 
   return results;
 };
