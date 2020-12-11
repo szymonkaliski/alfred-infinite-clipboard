@@ -53,6 +53,8 @@ const backup = () => {
 };
 
 const search = (term = "", limit = 0) => {
+  term = String(term);
+
   const searchSQL = `
     SELECT * FROM clipboard
     ${term.length > 0 ? "WHERE item LIKE :term" : ""}

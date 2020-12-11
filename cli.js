@@ -11,6 +11,7 @@ const args = yargs
     "backup",
     "backup Alfred Clipboard History merging with existing items"
   )
+  .command("search", "search Alfred Clipboard History")
   .demandCommand(1, "you need to provide a command")
   .help().argv;
 
@@ -38,4 +39,6 @@ if (command === "backup") {
 ${d.item}
 ${source(d)}`);
     });
+} else {
+  console.log(`unknown command ${command}`);
 }
