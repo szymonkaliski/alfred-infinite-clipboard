@@ -16,7 +16,7 @@ const REF_DATE = new Date(Date.UTC(2001, 0, 1)).getTime();
 const alfredDB = new Database(
   path.join(
     os.homedir(),
-    "/Library/ApplicationSupport/Alfred/Databases/clipboard.alfdb"
+    "/Library/Application Support/Alfred/Databases/clipboard.alfdb"
   ),
   { readonly: true }
 );
