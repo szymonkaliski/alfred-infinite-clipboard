@@ -9,11 +9,11 @@
   "author": "Szymon Kaliski <hi@szymonkaliski.com> (http://szymonkaliski.com)",
   "license": "MIT",
   "dependencies": {
-    "better-sqlite3": "^7.1.1",
-    "chalk": "^4.1.0",
-    "dateformat": "^3.0.3",
-    "env-paths": "^2.2.0",
-    "lodash": "^4.17.20",
-    "yargs": "^16.1.0"
+    "better-sqlite3": "^7.4.1",
+    "chalk": "^4.1.1",
+    "dateformat": "^4.5.1",
+    "env-paths": "^2.2.1",
+    "lodash": "^4.17.21",
+    "yargs": "^17.0.1"
   }
 }
